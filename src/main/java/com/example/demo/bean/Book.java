@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
@@ -26,7 +25,7 @@ public class Book {
     private String title;
     private String isbn;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name="author_id")
     public Author author;
 }

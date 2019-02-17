@@ -1,8 +1,9 @@
 package com.example.demo.service;
 
-import java.util.List;
-
 import javax.transaction.Transactional;
+
+import com.example.demo.bean.Cat;
+import com.example.demo.repository.CatRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,9 +12,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
-
-import com.example.demo.bean.Cat;
-import com.example.demo.repository.CatRepository;
 
 @Service
 public class CatService {

@@ -11,10 +11,21 @@ import javax.persistence.Id;
 @Entity
 public class Cat {
 	
+	
+
 	public Cat() {
-		// super();
+		super();
 		birthDay = new Date();
 	}
+	
+	public Cat(int id, String catName, int catAge, Date birthDay) {
+		super();
+		this.id = id;
+		this.catName = catName;
+		this.catAge = catAge;
+		this.birthDay = birthDay;
+	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
